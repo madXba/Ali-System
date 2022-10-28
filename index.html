@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="css1.css">
+          <title>Document</title>
+          <HTA:application
+          APPLICATION="Ali System"
+          ID="HTAAPP"
+          VERSION="1.0"
+          />
+</head>
+<body>
+       <div class="curd"> 
+          <div class="head">
+            <h2>Ali Eissa</h2>
+            <p>Student administration</p>
+          </div>
+          <div class="inputs"></div>
+           <input type="text" placeholder="اسم الطالب" id="title">
+            <div class="price">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="المبلغ" >
+            <input onkeyup="getTotal()"  type="number" id="discount" placeholder="الخصم " >
+            <small id="total">8428</small>
+           </div>
+           <input type="text" placeholder="السنه" id="category">
+           <input type="text" placeholder="العدد" id="count">
+           <button id="submit">Create</button>
+          <div class="outputs">
+             <div class="searchBlock">
+              <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="ابحث">
+              <div class="btnSearch">
+                 <button onclick="getSearchMode(this.id)" id="searchTitle">ابحث ب الأسم</button>
+                 <button onclick="getSearchMode(this.id)" id="searchTCategory">ابحث ب السنه</button>
+              </div>
+             </div>
+             <div id="deleteAll"></div>
+             <table>
+              <tr>
+                <th>اسم الطالب</th>
+                <th>السنه</th>
+                <th>شهر</th>
+                <th>المبلغ</th>
+                <th>الخصم</th>
+                <th>الاجمالي</th>
+                <th id="upd">تعديل</th>
+                <th id="del">حذف</th>
+              </tr>
+              <tbody id="tbody">
+              </tbody>
+             </table>
+          </div>
+  </div>
+  <script src="js.js"></script>
+</body>
+</html>
